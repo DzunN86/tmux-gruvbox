@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+. "${HOME}/.cache/wal/colors.sh"
 
 SELECTED_THEME="$(tmux show-option -gv @tokyo-night-tmux_theme)"
 TRANSPARENT_THEME="$(tmux show-option -gv @tokyo-night-tmux_transparent)"
@@ -49,6 +50,30 @@ case $SELECTED_THEME in
     ["bred"]="#8c4351"
     ["bwhite"]="#343b58"
     ["byellow"]="#8f5815"
+  )
+  ;;
+
+"pywal")
+  declare -A THEME=(
+    ["background"]="${backgroud}"
+    ["foreground"]="${foreground}"
+    ["black"]="#414868"
+    ["blue"]="${color1}"
+    ["cyan"]="#7dcfff"
+    ["green"]="#73daca"
+    ["magenta"]="#bb9af7"
+    ["red"]="#f7768e"
+    ["white"]="#c0caf5"
+    ["yellow"]="#e0af68"
+
+    ["bblack"]="${color6}"
+    ["bblue"]="#7aa2f7"
+    ["bcyan"]="#7dcfff"
+    ["bgreen"]="#41a6b5"
+    ["bmagenta"]="#bb9af7"
+    ["bred"]="#ff9e64"
+    ["bwhite"]="#787c99"
+    ["byellow"]="#e0af68"
   )
   ;;
 
